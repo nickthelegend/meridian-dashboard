@@ -1,0 +1,21 @@
+[toolchain]
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+meridian = "FiBXeQkSGjq1WJQU4JhicwHtuWtv4SQ5pbdBzE9B1xnF"
+
+[programs.devnet]
+meridian = "FiBXeQkSGjq1WJQU4JhicwHtuWtv4SQ5pbdBzE9B1xnF"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "./deployer.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"

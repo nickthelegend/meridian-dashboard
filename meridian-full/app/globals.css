@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --bg-deep: #05070A;
+  --bg-card: #0D1117;
+  --bg-hover: #161B22;
+  --primary-gold: #D4AF37;
+  --accent-gold: #C5A028;
+  --text-main: #F0F6FC;
+  --text-muted: #8B949E;
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --glass-bg: rgba(13, 17, 23, 0.8);
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Next.js internal vars override */
+  --background: #05070A;
+  --foreground: #F0F6FC;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-mono: ui-monospace, monospace;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    @apply border-transparent;
+  }
+
+  body {
+    @apply bg-[#05070A] text-[#F0F6FC] antialiased;
+    font-family: var(--font-body);
+  }
+}
+
+/* Institutional Design System Utilities */
+.gold-text { color: var(--primary-gold); }
+.bg-card-obsidian { background-color: var(--bg-card); }
+.border-institutional { border: 1px solid var(--border-subtle); }
+
+.glass-morphism {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

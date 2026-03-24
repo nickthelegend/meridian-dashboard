@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERIDIAN | Institutional Yield</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme overhaul">
+    <!-- Top Navigation Header -->
+    <header class="top-nav">
+        <div class="nav-container max-w-7xl">
+            <!-- Left: Logo -->
+            <div class="logo">
+                <div class="logo-box">M</div>
+                <span class="logo-text">MERIDIAN</span>
+            </div>
+
+            <!-- Center: Nav Links -->
+            <nav class="main-nav">
+                <a href="#" class="nav-link active" data-page="dashboard">Dashboard</a>
+                <a href="#" class="nav-link" data-page="governance">Governance</a>
+                <a href="#" class="nav-link" data-page="reports">Reports</a>
+                <a href="#" class="nav-link" data-page="settings">Settings</a>
+            </nav>
+
+            <!-- Right: Stats + Wallet -->
+            <div class="nav-right">
+                <div class="tvl-pill">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                    <span class="label">TVL</span>
+                    <span class="value">$15.05M</span>
+                </div>
+                <div class="wallet-button">
+                    <span class="dot active"></span>
+                    <span class="addr">0x71...C82A</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="app-container">
+        <main class="main-content overhaul-content">
+            <!-- Page: Dashboard (Home) -->
+            <section id="dashboard-page" class="page-section">
+                <div class="hero-section">
+                    <h1>Institutional Yield, <span class="gold-text">Secured.</span></h1>
+                    <p class="hero-subtitle">Managed liquidity across Kamino, Marginfi, and Drift with M-of-N governance.</p>
+                </div>
+
+                <div class="vault-grid">
+                    <div class="vault-card premium">
+                        <div class="vault-header">
+                            <div class="asset-pair">
+                                <div class="icon usdc"></div>
+                                <div>
+                                    <h3>USDC Stable Yield</h3>
+                                    <span class="tier balanced">Balanced Risk</span>
+                                </div>
+                            </div>
+                            <div class="apy-box">
+                                <span class="apy-label">Net APY</span>
+                                <span class="apy-value">12.4%</span>
+                            </div>
+                        </div>
+                        <div class="vault-body">
+                            <div class="alloc-bar">
+                                <div class="segment kamino" style="width: 60%"></div>
+                                <div class="segment marginfi" style="width: 40%"></div>
+                            </div>
+                            <div class="stats-row">
+                                <div><span class="s-label">TVL</span><span class="s-value">$8.2M</span></div>
+                                <div><span class="s-label">My Deposit</span><span class="s-value">$250K</span></div>
+                            </div>
+                        </div>
+                        <div class="vault-footer">
+                            <button class="btn btn-primary w-full">Manage Vault</button>
+                        </div>
+                    </div>
+                    
+                    <div class="vault-card premium">
+                        <div class="vault-header">
+                            <div class="asset-pair">
+                                <div class="icon sol"></div>
+                                <div>
+                                    <h3>SOL Liquid Staking</h3>
+                                    <span class="tier conservative">Conservative</span>
+                                </div>
+                            </div>
+                            <div class="apy-box">
+                                <span class="apy-label">Net APY</span>
+                                <span class="apy-value">8.2%</span>
+                            </div>
+                        </div>
+                        <div class="vault-body">
+                            <div class="alloc-bar">
+                                <div class="segment jito" style="width: 100%"></div>
+                            </div>
+                            <div class="stats-row">
+                                <div><span class="s-label">TVL</span><span class="s-value">$6.8M</span></div>
+                                <div><span class="s-label">My Deposit</span><span class="s-value">420 SOL</span></div>
+                            </div>
+                        </div>
+                        <div class="vault-footer">
+                            <button class="btn btn-primary w-full">Manage Vault</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Page: Governance -->
+            <section id="governance-page" class="page-section hidden">
+                <header class="overhaul-header">
+                    <h2>Governance</h2>
+                    <button class="btn btn-outline" id="btn-create-proposal">New Proposal</button>
+                </header>
+                <div class="proposal-feed">
+                    <div class="prop-item card">
+                        <div class="prop-status"><span class="badge active">Voting</span></div>
+                        <div class="prop-content">
+                            <h3>MIP-14: Adjust performance fees to 8.5%</h3>
+                            <div class="vote-meter">
+                                <div class="bar-fill" style="width: 72%"></div>
+                            </div>
+                        </div>
+                        <div class="prop-meta">72% For</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Page: Reports -->
+            <section id="reports-page" class="page-section hidden">
+                <header class="overhaul-header">
+                    <h2>Performance Analytics</h2>
+                </header>
+                <div class="analytics-hero card">
+                    <div class="chart-placeholder">
+                        <!-- Chart SVG would go here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Page: Settings -->
+            <section id="settings-page" class="page-section hidden">
+                <header class="overhaul-header">
+                    <h2>Configuration</h2>
+                </header>
+                <div class="settings-overhaul card">
+                    <!-- Whitelist / Multi-sig content -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
